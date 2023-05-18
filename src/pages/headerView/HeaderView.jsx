@@ -1,7 +1,8 @@
+import React from "react"
 
 function LeftView() {
   return (
-    <>
+    <React.Fragment>
     <div>
       
       123
@@ -9,7 +10,7 @@ function LeftView() {
     <div>
         456
     </div>
-    </>
+    </React.Fragment>
   )
 }
 

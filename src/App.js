@@ -1,23 +1,18 @@
-import LeftView from './pages/leftView/LeftView.jsx'
+import React from 'react'
+import HeaderView from './pages/headerView/HeaderView.jsx'
+
+import './assets/css/app.scss'
 
 function App() {
   return (
-    <div className="App">
-      <LeftView />
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <React.Fragment>
+      <header id='header'>
+        header
       </header>
-    </div>
+      <section id='main'>
+        main
+      </section>
+    </React.Fragment>
   )
 }
 
