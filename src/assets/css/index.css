@@ -4,8 +4,36 @@ html, body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  letter-spacing: .35px;
+  font-size: 62.5%;
+}
+html, body {
+  font-size: 1.2rem;
+  transition: background-color 1s ease-out;
+  background-color: #fafbff;
 }
 
-body {
-  font-size: 1rem;
+/* 夜间 白天模式所需 */
+html.night-mode, html.night-mode body {
+  background-color: #151518 !important;
+  color: #aaa;
+}
+html.night-mode #widget-container, html.night-mode #fixed-header {
+  background: rgba(0,0,0,0.8);
+}
+/* 结束 */
+
+.flex-r {
+  display: flex;
+  flex-direction: row;
+}
+.flex-c {
+  display: flex;
+  flex-direction: column;
+}
+.justify-c {
+  justify-content: center;
+}
+.align-c {
+  align-items: center;
 }

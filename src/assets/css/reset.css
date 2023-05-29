@@ -1,7 +1,10 @@
-div, span, p, li, ul, ol, dl, dd, dt, h1, h2, h3, h4, h5, h6, button, input, textarea, a, img {
+HTML, BODY, div, span, section,  p, li, ul, ol, dl, dd, dt, h1, h2, h3, h4, h5, h6, button, input, textarea, a, img {
 	box-sizing: border-box;
 	padding: 0;
 	margin: 0;
+  font: inherit;
+  vertical-align: baseline;
+  box-sizing: border-box;
 }
   
 ul, li, ol {
@@ -19,6 +22,21 @@ a {
 
 img {
   border: none;
-  display:block;
 }
 
+
+/* ::-webkit-scrollbar {
+  display: none;
+} */
+html::-webkit-scrollbar {
+  width: 10px; 
+}
+
+html::-webkit-scrollbar-track {
+background-color: rgba(0,0,0,0);
+}
+
+html::-webkit-scrollbar-thumb {
+background: #ccc;
+border-radius: 5px;
+}
