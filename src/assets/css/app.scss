@@ -11,10 +11,17 @@
     will-change: transform;
 	}
 
-	#main {
+	#container {
 		width: 62%;
 		margin-left: 38%;
 		padding: 4em;
+	}
+	#container:hover > .article{
+		opacity: .6;
+		transition: opacity 1.5s ease-out;
+	}
+	#container .article:hover {
+		opacity: 1;
 	}
 
 	//@for $i from 开始值 through 结束值 包含结束值  （SCSS 循环是从1开始的~）
@@ -35,9 +42,8 @@
 			width: 100%;
 			top: auto;
 			left: auto;
-			// padding: 7.5em 5em;
 		}
-		#main {
+		#container {
 			width: 100%;
 			margin-left: 0;
 			padding: 4em;

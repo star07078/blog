@@ -75,11 +75,11 @@ export default class MainView extends React.Component {
           </div>
           <div className='level-btn flex-r justify-c'>
             <div>
-              <i className='iconfont icon-gupiao'></i>
+              <i className='iconfont icon-liebiao'></i>
               <span>查看更多</span>
             </div>
             <div>
-              <i className='iconfont icon-gupiao'></i>
+              <i className='iconfont icon-tianxie'></i>
               <span>写新留言</span>
             </div>
           </div>

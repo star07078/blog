@@ -6,6 +6,146 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "5013",
+      "name": "列表",
+      "font_class": "liebiao",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "5028",
+      "name": "喜爱",
+      "font_class": "xiai",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    },
+    {
+      "icon_id": "201557",
+      "name": "关闭",
+      "font_class": "guanbi",
+      "unicode": "e602",
+      "unicode_decimal": 58882
+    },
+    {
+      "icon_id": "593377",
+      "name": "赞同-fill",
+      "font_class": "zantongfill",
+      "unicode": "e793",
+      "unicode_decimal": 59283
+    },
+    {
+      "icon_id": "625906",
+      "name": "06-左箭头",
+      "font_class": "zuojiantou",
+      "unicode": "e606",
+      "unicode_decimal": 58886
+    },
+    {
+      "icon_id": "5387521",
+      "name": "菜单",
+      "font_class": "caidan",
+      "unicode": "eaf1",
+      "unicode_decimal": 60145
+    },
+    {
+      "icon_id": "5387522",
+      "name": "关闭",
+      "font_class": "guanbi1",
+      "unicode": "eaf2",
+      "unicode_decimal": 60146
+    },
+    {
+      "icon_id": "6337498",
+      "name": "编辑",
+      "font_class": "tianxie",
+      "unicode": "ec88",
+      "unicode_decimal": 60552
+    },
+    {
+      "icon_id": "6775644",
+      "name": "爱心",
+      "font_class": "aixin",
+      "unicode": "eca1",
+      "unicode_decimal": 60577
+    },
+    {
+      "icon_id": "7596894",
+      "name": "24gf-thumbsDown",
+      "font_class": "24gf-thumbsDown",
+      "unicode": "eb33",
+      "unicode_decimal": 60211
+    },
+    {
+      "icon_id": "7596895",
+      "name": "24gf-thumbsDown2",
+      "font_class": "24gf-thumbsDown2",
+      "unicode": "eb34",
+      "unicode_decimal": 60212
+    },
+    {
+      "icon_id": "12872642",
+      "name": "公共-左箭头1",
+      "font_class": "gonggong-zuojiantou",
+      "unicode": "e64d",
+      "unicode_decimal": 58957
+    },
+    {
+      "icon_id": "12872648",
+      "name": "公共-右箭头1",
+      "font_class": "gonggong-youjiantou",
+      "unicode": "e64f",
+      "unicode_decimal": 58959
+    },
+    {
+      "icon_id": "18170325",
+      "name": "好评,好,赞同,点赞,拇指,喜欢",
+      "font_class": "like-full",
+      "unicode": "e9a2",
+      "unicode_decimal": 59810
+    },
+    {
+      "icon_id": "18170393",
+      "name": "评论组,说话,讨论,留言",
+      "font_class": "chat",
+      "unicode": "e9b1",
+      "unicode_decimal": 59825
+    },
+    {
+      "icon_id": "18773141",
+      "name": "留言",
+      "font_class": "liuya",
+      "unicode": "e60e",
+      "unicode_decimal": 58894
+    },
+    {
+      "icon_id": "18930917",
+      "name": "反对",
+      "font_class": "fandui",
+      "unicode": "e63f",
+      "unicode_decimal": 58943
+    },
+    {
+      "icon_id": "20305042",
+      "name": "填写",
+      "font_class": "tianxie1",
+      "unicode": "e74e",
+      "unicode_decimal": 59214
+    },
+    {
+      "icon_id": "24111695",
+      "name": "留言",
+      "font_class": "liuyan",
+      "unicode": "fb56",
+      "unicode_decimal": 64342
+    },
+    {
+      "icon_id": "34763017",
+      "name": "header",
+      "font_class": "header",
+      "unicode": "e605",
+      "unicode_decimal": 58885
+    },
+    {
       "icon_id": "398280",
       "name": "白天模式，明亮模式",
       "font_class": "baitianmoshimingliangmoshi",

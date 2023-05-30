@@ -1,9 +1,10 @@
 import React from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-
-import MainView from './pages/mainView/MainView.jsx'
 import './assets/css/app.scss'
 
+import MainView from './pages/mainView/MainView.jsx'
+
+import List from './pages/article/List.jsx'
 import Article from './pages/article/Article.jsx'
 
 export class App extends React.Component {
@@ -36,10 +37,11 @@ export class App extends React.Component {
         <header id='header' ref={(ref) => this.headerBg = ref} className={'bg' + this.state.bg}>
           <MainView />
         </header>
-        <section id='main' className='container'>
+        <section id='container'>
           <BrowserRouter>
             <Routes>
-              <Route path='/' element={<Article />} />
+              <Route path='/' element={<List />} />
+              <Route path='/article' element={<Article />} />
             </Routes>
           </BrowserRouter>
         </section>
