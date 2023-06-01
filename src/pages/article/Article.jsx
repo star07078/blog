@@ -1,9 +1,9 @@
-import Message from '../message/Message.jsx'
+import ArticleMessage from '../articleMessage/ArticleMessage.jsx'
 
 export default function Article() {
   return (
     <>
-      <Message />
+      <ArticleMessage />
       <div className='article-details'>
         <header>
           <h1>我做了一个可以锻炼视力的 App</h1>

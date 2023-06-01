@@ -1,9 +1,11 @@
-import { useState } from "react";
-import Head from "../head/Head.jsx";
+import { useState } from "react"
+import Head from "../head/Head.jsx"
+import { useNavigate } from "react-router-dom";
 
 import "./mainView.scss";
 
 export default function MainView() {
+  let navigate = useNavigate()
   let [levelMessageList, setLevelMessageList] = useState([
     {
       authorImg: require("../../assets/images/author.png"),
@@ -67,7 +69,7 @@ export default function MainView() {
           </ul>
         </div>
         <div className="level-btn flex-r justify-c">
-          <div>
+          <div onClick={e => navigate('/message')}>
             <i className="iconfont icon-liebiao"></i>
             <span>查看更多</span>
           </div>

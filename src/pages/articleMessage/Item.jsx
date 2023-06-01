@@ -35,10 +35,10 @@ export default function Item() {
       <div className='comment-item'>
         <header>
           <img src={author} alt="Dandy Weng的头像" />
-          <h3><a target="_blank" rel="nofollow external" data-confirm="确认访问评论者的个人网页？" href="http://www.dandyweng.com" class="url">Dandy Weng</a></h3>
-          <span>在<time datetime="2017 年 9 月 16 日 10:56"> 2017 年 9 月 16 日</time>回复：</span>
+          <h3><a target="_blank" rel="nofollow external" data-confirm="确认访问评论者的个人网页？" href="http://www.dandyweng.com" className="url">Dandy Weng</a></h3>
+          <span>在<time dateTime="2017 年 9 月 16 日 10:56"> 2017 年 9 月 16 日</time>回复：</span>
         </header>
-        <div class='content-item-message'>
+        <div className='content-item-message'>
           <p>那就试试吧，有疑问可以来这里交流</p>
         </div>
         <div className='comment-item-icon'>
