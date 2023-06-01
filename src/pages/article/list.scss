@@ -77,11 +77,12 @@
 .article-details {
   padding-top: 2em;
   padding-bottom: 3.5em;
+  padding-right: 6em;
   header {
     margin-bottom: 3em;
     h1 {
       color: #333;
-      font-size: 4rem;
+      font-size: 3.2rem;
       font-weight: bold;
       line-height: 1.5;
       margin-bottom: 0.25em;
@@ -157,6 +158,20 @@
     button {
       margin: 0;
       width: 46%;
+    }
+  }
+  .article-details {
+    padding-right: 0;
+    .content {
+      img {
+        width: 100%;
+        margin: 2em 0;
+      }
+    }
+    footer {
+      div {
+        width: 90%;
+      }
     }
   }
 }

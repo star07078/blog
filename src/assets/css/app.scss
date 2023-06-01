@@ -16,9 +16,12 @@
 		margin-left: 38%;
 		padding: 4em;
 	}
+	#container> .article{
+		transition: opacity 1s ease-out;
+		transition-delay: 1s;
+	}
 	#container:hover > .article{
 		opacity: .6;
-		transition: opacity 1.5s ease-out;
 	}
 	#container .article:hover {
 		opacity: 1;
@@ -47,6 +50,13 @@
 			width: 100%;
 			margin-left: 0;
 			padding: 4em;
+		}
+	}
+}
+@media screen and (max-width: 768px) {
+	#root {
+		#container {
+			padding: 2em;
 		}
 	}
 }

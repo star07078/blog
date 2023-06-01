@@ -28,8 +28,8 @@ img {
 /* ::-webkit-scrollbar {
   display: none;
 } */
-html::-webkit-scrollbar {
-  width: 10px; 
+::-webkit-scrollbar {
+  width: 6px; 
 }
 
 html::-webkit-scrollbar-track {
@@ -38,5 +38,5 @@ background-color: rgba(0,0,0,0);
 
 html::-webkit-scrollbar-thumb {
 background: #ccc;
-border-radius: 5px;
+border-radius: 3px;
 }
