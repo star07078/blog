@@ -1,5 +1,8 @@
-import "./message.scss";
-import img from "../../assets/images/img.jpeg";
+import "./message.scss"
+import img from "../../assets/images/img.jpeg"
+
+import Pagination from "../pagination/Pagination"
+
 export default function Message() {
   return (
     <article className="article">
@@ -53,7 +56,7 @@ export default function Message() {
           </p>
         </div>
       </div>
-      <ul>
+      <ul className='ul'>
         <li>
           <header>
             <img srcSet={img} />
@@ -134,6 +137,7 @@ export default function Message() {
       </div>
         </li>
       </ul>
+      <Pagination total={35} current={3} limit={5}/>
     </article>
-  );
+  )
 }

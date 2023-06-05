@@ -94,7 +94,7 @@
       }
     }
   }
-  ul {
+  .ul {
     li {
       position: relative;
       background-color: #fff;
@@ -115,8 +115,8 @@
 
       header {
         position: relative;
-    display: inline-block;
-    margin-bottom: 1.75em;
+        display: inline-block;
+        margin-bottom: 1.75em;
         img {
           display: inline-block;
           border-radius: 100%;
