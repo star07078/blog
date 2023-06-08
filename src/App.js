@@ -11,42 +11,23 @@ import Message from "./pages/message/Message.jsx";
 export class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      headerBg: null,
-      bg: Math.ceil(Math.random() * 9),
-    };
   }
 
   componentDidMount() {
-    this.changeHeaderBg();
+
   }
 
-  // 改变头部背景
-  changeHeaderBg = (bg) => {
-    setInterval(() => {
-      let bg = this.state.bg;
-      if (bg > 9) bg = 0;
-      this.setState({
-        bg: ++bg,
-      });
-    }, 10000);
-  };
 
   render() {
     return (
       <BrowserRouter>
-        <header
-          id="header"
-          ref={(ref) => (this.headerBg = ref)}
-          className={"bg" + this.state.bg}
-        >
-          <MainView />
-        </header>
+        <MainView />
         <section id="container">
           <Routes>
             <Route path="/" element={<List />} />
             <Route path="/article" element={<Article />} />
             <Route path="/message" element={<Message />} />
+            <Route path="/message/:page" element={<Message />} />
           </Routes>
         </section>
       </BrowserRouter>

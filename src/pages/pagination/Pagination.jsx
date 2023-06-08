@@ -2,45 +2,77 @@ import './pagination.scss'
 
 export default function Pagination(props) {
   let {total, current, limit} = props
+  
+  // 所有的分页
+  let allPage = Math.ceil(total / limit)
+
   let prev = {
     title: '上一页',
-    disabled: false,
-    className: ''
+    num: -1,
+    className: `button ${current == 1 ? 'disabled': ''}`
   }
   let next = {
     title: '下一页',
-    disabled: false,
-    className: ''
+    num: 1,
+    className: `button ${current == allPage ? ' disabled': ''}`
   }
-  // 所有的分页
-  let allPage = Math.ceil(total / limit)
   let arr = [prev]
 
-  if (allPage < 7) {
+  if (allPage <= 7) {
     for(var i=1; i<=allPage; i++) {
       arr.push({title: i, className: i===current ? 'active': ''})
     }
-  } else if (allPage === ) {
-    if (current < 3) {
-      arr.push({title: 1, className: ''}, {title: '...', type: 'prev'})
-      for(var i=allPage-current; i<=allPage; i++) {
+  } else if (allPage >= 8) {
+    if (current <= 4) {
+      for(var i=1; i<=5; i++) {
         arr.push({title: i, className: i===current ? 'active': ''})
       }
+      arr.push(
+        {title: '...', className: 'more', icon: 'iconfont icon-gonggong-youjiantou', num: 5},
+        {title: allPage},
+      )
+    } else if (current >= allPage-3) {
+      arr.push(
+        {title: 1},
+        {title: '...', className: 'more', icon: 'iconfont icon-gonggong-zuojiantou', num: -5},
+        {title: allPage-4, className: allPage-4===current ? 'active': ''},
+        {title: allPage-3, className: allPage-3===current ? 'active': ''},
+        {title: allPage-2, className: allPage-2===current ? 'active': ''},
+        {title: allPage-1, className: allPage-1===current ? 'active': ''},
+        {title: allPage, className: allPage===current ? 'active': ''},
+      )
     } else {
-      for(var i=1; i<=allPage-current; i++) {
-        arr.push({title: i, className: i===current ? 'active': ''})
-      }
-      arr.push({title: '...', className: 'next'}, {title: 6, className: ''})
+      arr.push(
+        {title: 1},
+        {title: '...', className: 'more', icon: 'iconfont icon-gonggong-zuojiantou', num: -5},
+        {title: current-2},
+        {title: current-1},
+        {title: current, className: 'active'},
+        {title: current+1},
+        {title: current+2},
+        {title: '...', className: 'more', icon: 'iconfont icon-gonggong-youjiantou', num: 5},
+        {title: allPage},
+      )
     }
   }
+  arr.push(next)
 
-  console.log(arr);
 
   return (
     <div className='pagination'>
-      {/* {arr} */}
       <ul>
-        <li className='button'>
+        {
+          arr.map((item, i) => {
+            return (
+              <li className={item.className} key={i} onClick={e => props.handle(item)}>
+                <span>{item.title}</span>
+                {item.icon && <i className={item.icon}></i>}
+              </li>
+            )
+          })
+        }
+        
+        {/* <li className='button'>
           <i className='iconfont icon-gonggong-zuojiantou'></i>
           上一页
         </li>
@@ -73,7 +105,7 @@ export default function Pagination(props) {
         <li className='button'>
           下一页
           <i className='iconfont icon-gonggong-youjiantou'></i>
-        </li>
+        </li> */}
       </ul>
     </div>
   )

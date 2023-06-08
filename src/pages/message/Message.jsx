@@ -1,9 +1,25 @@
+import { useState } from "react"
 import "./message.scss"
 import img from "../../assets/images/img.jpeg"
 
 import Pagination from "../pagination/Pagination"
 
 export default function Message() {
+  let [total, setTotal] = useState(45)
+  let [current, setCurrent] = useState(2)
+  let [limit, setLimit] = useState(5)
+
+  const handle = (item) => {
+    console.log(item)
+    let num = item.title
+    if (item.num) {
+      num = current + item.num
+      console.log(num, '==');
+      num = num <=1 ? 1 : num >= total/limit ? Math.ceil(total/limit) : num 
+    }
+    setCurrent(num)
+  }
+
   return (
     <article className="article">
       <header className="header">
@@ -90,54 +106,54 @@ export default function Message() {
             </span>
           </div>
           <div className="content">
-        <div className="form">
-          <header>
-            <img id="author-gravatar" srcSet={img} />
-            <hgroup>
-              <input
-                name="author"
-                type="text"
-                placeholder="点击此处输入你的称呼"
-                value=""
-                maxLength="10"
-              />
-            </hgroup>
-          </header>
-          <textarea
-            name="comment"
-            aria-required="true"
-            placeholder="你也来说两句吧！点击这里输入留言内容"
-            maxLength="9999"
-          ></textarea>
-          <div class="uniform">
-            <input
-              name="email"
-              type="text"
-              placeholder="Email 地址"
-              value=""
-              maxLength="39"
-            />
-            <input
-              name="url"
-              type="text"
-              placeholder="个人主页或微博网址"
-              value=""
-              maxLength="99"
-            />
-            <button name="submit" type="submit">
-              保存
-            </button>
+            <div className="form">
+              <header>
+                <img id="author-gravatar" srcSet={img} />
+                <hgroup>
+                  <input
+                    name="author"
+                    type="text"
+                    placeholder="点击此处输入你的称呼"
+                    value=""
+                    maxLength="10"
+                  />
+                </hgroup>
+              </header>
+              <textarea
+                name="comment"
+                aria-required="true"
+                placeholder="你也来说两句吧！点击这里输入留言内容"
+                maxLength="9999"
+              ></textarea>
+              <div class="uniform">
+                <input
+                  name="email"
+                  type="text"
+                  placeholder="Email 地址"
+                  value=""
+                  maxLength="39"
+                />
+                <input
+                  name="url"
+                  type="text"
+                  placeholder="个人主页或微博网址"
+                  value=""
+                  maxLength="99"
+                />
+                <button name="submit" type="submit">
+                  保存
+                </button>
+              </div>
+              <p>
+                <strong>隐私说明：</strong>你个人主页网址会被公开链接，但 Email
+                地址不会被公开显示；你的 IP
+                地址会被保存，但只会公开显示你当前所在的城市名。
+              </p>
+            </div>
           </div>
-          <p>
-            <strong>隐私说明：</strong>你个人主页网址会被公开链接，但 Email
-            地址不会被公开显示；你的 IP
-            地址会被保存，但只会公开显示你当前所在的城市名。
-          </p>
-        </div>
-      </div>
         </li>
       </ul>
-      <Pagination total={35} current={3} limit={5}/>
+      <Pagination total={total} current={current} limit={limit} handle={handle}/>
     </article>
   )
 }

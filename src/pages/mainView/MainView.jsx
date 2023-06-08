@@ -1,8 +1,10 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import Head from "../head/Head.jsx"
 import { useNavigate } from "react-router-dom";
 
 import "./mainView.scss";
+
+let timer = null
 
 export default function MainView() {
   let navigate = useNavigate()
@@ -33,10 +35,31 @@ export default function MainView() {
       username: "匿名",
       content: "你好啊, 我很欣赏你",
     },
-  ]);
+  ])
+
+  let [bg, setBg] = useState(Math.ceil(Math.random() * 9))
+
+  let changeHeaderBg = () => {
+    clearInterval(timer)
+    timer = setInterval(() => {
+      if (bg > 9) bg = 0;
+      bg ++
+      setBg(bg)
+    }, 10000);
+    
+  };
+
+  useEffect(() => {
+    changeHeaderBg()
+  })
+
 
   return (
-    <>
+    
+    <header
+      id="header"
+      className={"bg" + bg}
+    >
       <div id="fixed-header" className="head">
         <Head />
       </div>
@@ -90,6 +113,6 @@ export default function MainView() {
           </div>
         </div>
       </div>
-    </>
+    </header>
   )
 }

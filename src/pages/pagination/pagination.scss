@@ -37,6 +37,10 @@
       &:hover {
         background-color: rgba(200,200,200,.3);
       }
+      span, i {
+        width: 14px;
+        height: 100%;
+      }
     }
     li.more {
       i {
@@ -44,7 +48,9 @@
         color: blue;
       }
       span {
+        position: relative;
         display: block;
+        top: -4px;
       }
       &:hover {
         i {
@@ -52,6 +58,26 @@
         }
         span {
           display: none;
+        }
+      }
+    }
+    li.disabled {
+      cursor: not-allowed;
+      color: #999;
+      background-color: #fff;
+      border-color: #ddd;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .pagination {
+    ul {
+      li {
+        display: none;
+        &.button {
+          display: inline-block;
+          width: 45%;
         }
       }
     }
